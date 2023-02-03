@@ -33,4 +33,4 @@ jobs:
     - name: Download Antics and Reuploading
       continue-on-error: true
       run: |
-        bash luminethonk.sh "${{ github.event.client_payload.videourl }}" "${{ github.event.inputs.webhookurl }}"
+        bash luminethonk.sh "${{ github.event.client_payload.videourl }}" "${{ github.event.client_payload.webhookurl }}"
