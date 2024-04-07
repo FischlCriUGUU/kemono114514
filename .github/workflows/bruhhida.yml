@@ -45,6 +45,8 @@ jobs:
   ruantics2:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
+    if: ${{ always() }}
+    needs: [ruantics]
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -68,6 +70,8 @@ jobs:
   ruantics3:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
+    if: ${{ always() }}
+    needs: [ruantics, ruantics2]
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -91,6 +95,8 @@ jobs:
   ruantics4:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
+    if: ${{ always() }}
+    needs: [ruantics, ruantics2, ruantics3]
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
