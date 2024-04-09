@@ -19,7 +19,7 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  ruantics:
+  astawaifu1:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -42,11 +42,11 @@ jobs:
       continue-on-error: true
       run: |
         bash luminethonk.sh
-  ruantics2:
+  astawaifu2:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
     if: ${{ always() }}
-    needs: [ruantics]
+    needs: [astawaifu1]
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -67,11 +67,11 @@ jobs:
       continue-on-error: true
       run: |
         bash luminethonk.sh
-  ruantics3:
+  astawaifu3:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
     if: ${{ always() }}
-    needs: [ruantics, ruantics2]
+    needs: [astawaifu1, astawaifu2]
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -92,11 +92,11 @@ jobs:
       continue-on-error: true
       run: |
         bash luminethonk.sh
-  ruantics4:
+  astawaifu4:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
     if: ${{ always() }}
-    needs: [ruantics, ruantics2, ruantics3]
+    needs: [astawaifu1, astawaifu2, astawaifu3]
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
